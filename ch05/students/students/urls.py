@@ -10,9 +10,8 @@ urlpatterns = [
     url(r'^index/$', views.index),
     
     url(r'^post/$', views.post),#POST傳送表單
-    # url(r'^post1/$', views.post1),#資料新增，資料不驗證
+    url(r'^post1/$', views.post1),#資料新增，資料不驗證
     # url(r'^post2/$', views.post2),#資料新增，資料不驗證
- 
     # url(r'^delete/(\d+)/$', views.delete),
 
     # url(r'^edit/(\d+)/$', views.edit),#由瀏覽器瀏覽
