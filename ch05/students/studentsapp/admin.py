@@ -10,7 +10,7 @@ from studentsapp.models import student
 	
 #admin.site.register(student,studentAdmin)
 
-	
+
 # 第一種方式，未加入 ModelAdmin 類別 
 #admin.site.register(student)	
 
