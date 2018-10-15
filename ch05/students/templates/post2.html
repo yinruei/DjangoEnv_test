@@ -4,11 +4,11 @@
   <h2>student 資料表新增(二)</h2>
   <form action="." method="POST" name="form1">
 	{% csrf_token %}
-	<table border="1" cellspacing="1" cellpadding="4">
-	  <tr><th >姓名</th><td >{{postform.cName}}</td></tr>
+	<table border="1" cellspacing="1" cellpadding="15">
+	  <tr><th >姓名</th><td>{{postform.cName}}</td></tr>
 	  <tr>
 		<th>性別</th>
-		<td >
+		<td>
 		  <input name="cSex" type="radio" id="cSex1" value="M" checked="checked" />男生
 		  <input name="cSex" type="radio" id="cSex2" value="F" />女生
 		</td>
