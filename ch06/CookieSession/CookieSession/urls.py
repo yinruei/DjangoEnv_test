@@ -21,13 +21,13 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^set_cookie/(\w+)/(\w+)/$', views.set_cookie),
-    # url(r'^set_cookie2/(\w+)/(\w+)/$', views.set_cookie2),
+    url(r'^set_cookie2/(\w+)/(\w+)/$', views.set_cookie2),
     url(r'^get_cookie/(\w+)/$', views.get_cookie),
     url(r'^get_allcookies/$', views.get_allcookies),
-    # url(r'^delete_cookie/(\w+)/$', views.delete_cookie),
+    url(r'^delete_cookie/(\w+)/$', views.delete_cookie),
 
-    # url(r'^$', views.index),
-    # url(r'^index/$', views.index),
+    url(r'^$', views.index),
+    url(r'^index/$', views.index),
 
     # url(r'^set_session/(\w+)/(\w+)$', views.set_session),
     # url(r'^get_session/(\w+)/$', views.get_session),
