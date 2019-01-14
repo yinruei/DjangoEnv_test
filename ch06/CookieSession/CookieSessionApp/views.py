@@ -64,3 +64,12 @@ def get_session(request, key=None):
         return HttpResponse('%s : %s' % (key, request.session[key]))
     else:
         return HttpResponse('Session不存在!')
+
+def get_allsessions(request):
+    if request.session != None:
+        strsession=""
+        for key, value in request.session.items():
+            strsession = strsession + key + ":" + str(value) +"<br>"
+        return HttpResponse(strsession)
+    else:
+        return HttpResponse('Session 不存在!')

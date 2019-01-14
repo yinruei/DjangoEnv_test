@@ -29,9 +29,9 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^index/$', views.index),
 
-    # url(r'^set_session/(\w+)/(\w+)$', views.set_session),
-    # url(r'^get_session/(\w+)/$', views.get_session),
-    # url(r'^get_allsessions/$', views.get_allsessions),
+    url(r'^set_session/(\w+)/(\w+)$', views.set_session),
+    url(r'^get_session/(\w+)/$', views.get_session),
+    url(r'^get_allsessions/$', views.get_allsessions),
 
     # url(r'^vote/$', views.vote),
     # url(r'^set_session2/(\w+)/(\w+)/', views.set_session2),
