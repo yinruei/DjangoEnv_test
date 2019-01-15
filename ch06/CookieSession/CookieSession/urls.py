@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^get_session/(\w+)/$', views.get_session),
     url(r'^get_allsessions/$', views.get_allsessions),
 
-    # url(r'^vote/$', views.vote),
+    url(r'^vote/$', views.vote),
     # url(r'^set_session2/(\w+)/(\w+)/', views.set_session2),
     # url(r'^delete_session/(\w+)/$', views.delete_session),
 

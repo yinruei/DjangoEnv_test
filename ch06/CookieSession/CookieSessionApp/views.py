@@ -73,3 +73,12 @@ def get_allsessions(request):
         return HttpResponse(strsession)
     else:
         return HttpResponse('Session 不存在!')
+
+def vote(request):###怪怪的
+    if not "vote" in request.session:
+        request.session["vote"] = True
+        msg = "您第一次投票!"
+    else:
+        msg = "您已投過票!"
+        response = HttpResponse(msg)
+    return response
