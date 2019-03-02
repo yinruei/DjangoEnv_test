@@ -122,3 +122,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [    # 加入 static 路徑
     os.path.join(BASE_DIR, 'static'),
 ]
+# SESSION_EXPIRE_AT_BROWSER_CLOSE=True

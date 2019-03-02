@@ -80,5 +80,42 @@ def vote(request):###怪怪的
         msg = "您第一次投票!"
     else:
         msg = "您已投過票!"
-        response = HttpResponse(msg)
+    response = HttpResponse(msg)
+    print(response)
     return response
+
+def set_session2(request, key=None, value=None):
+    response = HttpResponse('Session 儲存完畢!')
+    request.session[key]=value
+    request.session.set_expiry(30)#設定持續時間為30秒
+    return response
+
+def delete_session(request, key=None):
+    if key in request.session:
+        response = HttpResponse('Delete Session: '+ key)
+        del request.session[key]
+        return response
+    else:
+        return HttpResponse('No Session: ' + key)
+
+def login(request):
+    #預設帳號密碼
+    username = 'yinruei'
+    password = '1234'
+    if request.method=='POST':
+        if not 'username' in request.session:
+            if request.POST['username'] == username and request.POST['password'] == password:
+                request.session['username']=username#儲存session
+                message = username + '您好，登入成功'
+                status = 'login'
+    else:
+        if 'username' in request.session:
+            message=request.session['username'] + ' 您已經入過了! '
+            status='login'
+    return render(request, 'login.html', locals())
+
+def logout(request):
+    if 'username' in request.session:
+        message=request.session['username'] + ' 您已登出! '
+        del request.session['username']#刪除session
+    return render(request, 'login.html', locals())
